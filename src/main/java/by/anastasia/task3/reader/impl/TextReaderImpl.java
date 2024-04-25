@@ -26,7 +26,7 @@ public class TextReaderImpl implements TextReader {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             text = reader.lines().map(str -> str + SPACE_DELIMITER).collect(Collectors.joining());
         } catch (IOException e) {
-            throw new TextException("File " + filepath + " can't be read.");
+            throw new TextException("File " + filepath + " can't be read.", e);
         }
         return text;
     }
