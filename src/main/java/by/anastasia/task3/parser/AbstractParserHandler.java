@@ -1,13 +1,17 @@
 package by.anastasia.task3.parser;
 
 import by.anastasia.task3.composite.AbstractTextComponent;
-import by.anastasia.task3.composite.TextComponent;
-import by.anastasia.task3.composite.TextComposite;
-
-import java.util.List;
 
 public abstract class AbstractParserHandler {
-    protected AbstractParserHandler successor;
+    private AbstractParserHandler successor;
+
+    public void setSuccessor(AbstractParserHandler successor) {
+        this.successor = successor;
+    }
+
+    public AbstractParserHandler getSuccessor() {
+        return successor;
+    }
 
     public abstract void parse(String text, AbstractTextComponent composite);
 }
