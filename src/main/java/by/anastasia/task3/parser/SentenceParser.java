@@ -5,52 +5,26 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class SentenceParser extends AbstractParserHandler {
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final String WORD_REGEX = "[a-zA-Z]+";
-    private static final String PUNCTUATION_REGEX = "\\p{Punct}";
-    private static final String NUMBER_REGEX = "\\d";
+    private static final String LEXEME_REGEX = "\\s";
 
     public SentenceParser() {
-        setSuccessor(new WordParser());
+        setSuccessor(new LexemeParser());
     }
 
     @Override
     public void parse(String text, AbstractTextComponent composite) {
         LOGGER.log(Level.DEBUG, "Start sentence parsing");
 
-        Pattern numberPattern = Pattern.compile(NUMBER_REGEX);
-        Matcher numberMatcher = numberPattern.matcher(text);
+        String[] lexemes = text.split(LEXEME_REGEX);
 
-        Pattern wordPattern = Pattern.compile(WORD_REGEX);
-        Matcher wordMatcher = wordPattern.matcher(text);
-
-        Pattern punctuationPattern = Pattern.compile(PUNCTUATION_REGEX);
-        Matcher punctuationMatcher = punctuationPattern.matcher(text);
-
-        while (numberMatcher.find()) {
-            String numberStr = numberMatcher.group();
-            char number = numberStr.charAt(0);
-            AbstractTextComponent numberComponent = new SymbolLeaf(TextType.NUMBER, number);
-            composite.add(numberComponent);
+        for (String lexeme : lexemes) {
+            AbstractTextComponent lexemeComponent = new TextComposite(TextType.LEXEME);
+            composite.add(lexemeComponent);
+            getSuccessor().parse(lexeme, lexemeComponent);
         }
 
-        while (wordMatcher.find()) {
-            String word = wordMatcher.group();
-            TextComposite wordComponent = new TextComposite(TextType.WORD);
-            composite.add(wordComponent);
-            getSuccessor().parse(word, wordComponent);
-        }
-
-        while (punctuationMatcher.find()) {
-            String punctuationStr = punctuationMatcher.group();
-            char punctuation = punctuationStr.charAt(0);
-            AbstractTextComponent punctuationComponent = new SymbolLeaf(TextType.PUNCTUATION, punctuation);
-            composite.add(punctuationComponent);
-        }
         LOGGER.log(Level.DEBUG, "Finish sentence parsing");
     }
 }

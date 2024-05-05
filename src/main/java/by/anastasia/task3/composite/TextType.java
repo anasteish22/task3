@@ -5,6 +5,7 @@ public enum TextType {
     NUMBER,
     PUNCTUATION,
     WORD,
+    LEXEME,
     SENTENCE,
     PARAGRAPH,
     TEXT
