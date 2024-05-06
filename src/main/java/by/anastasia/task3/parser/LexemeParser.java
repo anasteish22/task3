@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 public class LexemeParser extends AbstractParserHandler {
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final String WORD_REGEX = "[a-zA-Z]+";
+    private static final String LETTER_REGEX = "[a-zA-Zа-яА-Я]";
     private static final String PUNCTUATION_REGEX = "\\p{Punct}";
     private static final String NUMBER_REGEX = "\\d";
 
@@ -25,34 +25,24 @@ public class LexemeParser extends AbstractParserHandler {
     public void parse(String text, AbstractTextComponent composite) {
         LOGGER.log(Level.DEBUG, "Start lexeme parsing");
 
-        Pattern numberPattern = Pattern.compile(NUMBER_REGEX);
-        Matcher numberMatcher = numberPattern.matcher(text);
+        AbstractTextComponent lexeme = new TextComposite(TextType.LEXEME);
 
-        Pattern wordPattern = Pattern.compile(WORD_REGEX);
-        Matcher wordMatcher = wordPattern.matcher(text);
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+            String strCh = String.valueOf(ch);
 
-        Pattern punctuationPattern = Pattern.compile(PUNCTUATION_REGEX);
-        Matcher punctuationMatcher = punctuationPattern.matcher(text);
+            SymbolLeaf symbol = new SymbolLeaf(ch);
 
-        while (numberMatcher.find()) {
-            String numberStr = numberMatcher.group();
-            char number = numberStr.charAt(0);
-            AbstractTextComponent numberComponent = new SymbolLeaf(TextType.NUMBER, number);
-            composite.add(numberComponent);
-        }
-
-        while (wordMatcher.find()) {
-            String word = wordMatcher.group();
-            TextComposite wordComponent = new TextComposite(TextType.WORD);
-            composite.add(wordComponent);
-            getSuccessor().parse(word, wordComponent);
-        }
-
-        while (punctuationMatcher.find()) {
-            String punctuationStr = punctuationMatcher.group();
-            char punctuation = punctuationStr.charAt(0);
-            AbstractTextComponent punctuationComponent = new SymbolLeaf(TextType.PUNCTUATION, punctuation);
-            composite.add(punctuationComponent);
+            if (strCh.matches(NUMBER_REGEX)) {
+                symbol.setType(TextType.NUMBER);
+            } else if (strCh.matches(PUNCTUATION_REGEX)) {
+                symbol.setType(TextType.PUNCTUATION);
+            } else if (strCh.matches(LETTER_REGEX)) {
+                symbol.setType(TextType.LETTER);
+            } else {
+                LOGGER.log(Level.WARN, "Unknown symbol");
+            }
+            composite.add(symbol);
         }
 
         LOGGER.log(Level.DEBUG, "Finish lexeme parsing");

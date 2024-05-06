@@ -9,8 +9,15 @@ public abstract class AbstractTextComponent implements TextComponent {
         this.type = type;
     }
 
+    public AbstractTextComponent() {
+    }
+
     public TextType getType() {
         return type;
+    }
+
+    public void setType(TextType type) {
+        this.type = type;
     }
 
     public abstract void add(AbstractTextComponent component);

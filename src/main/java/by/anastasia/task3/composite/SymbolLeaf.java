@@ -10,6 +10,10 @@ public class SymbolLeaf extends AbstractTextComponent {
         this.symbol = symbol;
     }
 
+    public SymbolLeaf(char symbol) {
+        this.symbol = symbol;
+    }
+
     @Override
     public void add(AbstractTextComponent component) {
         throw new UnsupportedOperationException();
@@ -36,8 +40,6 @@ public class SymbolLeaf extends AbstractTextComponent {
 
     @Override
     public String toString() {
-        return "SymbolLeaf{" +
-                "symbol=" + symbol +
-                '}';
+        return String.valueOf(symbol);
     }
 }

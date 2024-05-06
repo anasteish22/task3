@@ -47,8 +47,10 @@ public class TextComposite extends AbstractTextComponent {
 
     @Override
     public String toString() {
-        return "AbstractTextComponent{" +
-                "components=" + components +
-                '}';
+        String text = "";
+        for (AbstractTextComponent component:components) {
+            text += component.toString();
+        }
+        return text;
     }
 }
