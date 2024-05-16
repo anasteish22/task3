@@ -1,43 +1,277 @@
-18:53:34.158 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.194 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.194 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.194 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.195 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.195 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.195 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.195 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.195 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.195 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.196 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.197 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.197 [main] DEBUG SentenceParser - Finish sentence parsing
-18:53:34.197 [main] DEBUG SentenceParser - Start sentence parsing
-18:53:34.197 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.197 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.198 [main] DEBUG LexemeParser - Start lexeme parsing
-18:53:34.199 [main] DEBUG LexemeParser - Finish lexeme parsing
-18:53:34.199 [main] DEBUG SentenceParser - Finish sentence parsing
-18:53:34.199 [main] DEBUG ParagraphParser - Finish paragraph parsing
-18:53:34.199 [main] DEBUG TextParser - Finish text parsing
+17:54:52.817 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.821 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.821 [main] DEBUG WordParser - Start word parsing
+17:54:52.821 [main] DEBUG WordParser - Finish word parsing
+17:54:52.821 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.821 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.822 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.822 [main] DEBUG WordParser - Start word parsing
+17:54:52.822 [main] DEBUG WordParser - Finish word parsing
+17:54:52.822 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.822 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.822 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.822 [main] DEBUG WordParser - Start word parsing
+17:54:52.822 [main] DEBUG WordParser - Finish word parsing
+17:54:52.822 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.822 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.822 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.822 [main] DEBUG WordParser - Start word parsing
+17:54:52.822 [main] DEBUG WordParser - Finish word parsing
+17:54:52.822 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.822 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.823 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.823 [main] DEBUG WordParser - Start word parsing
+17:54:52.823 [main] DEBUG WordParser - Finish word parsing
+17:54:52.823 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.823 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.823 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.823 [main] DEBUG WordParser - Start word parsing
+17:54:52.823 [main] DEBUG WordParser - Finish word parsing
+17:54:52.823 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.823 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.823 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.823 [main] DEBUG WordParser - Start word parsing
+17:54:52.823 [main] DEBUG WordParser - Finish word parsing
+17:54:52.823 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.823 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.823 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.823 [main] DEBUG WordParser - Start word parsing
+17:54:52.823 [main] DEBUG WordParser - Finish word parsing
+17:54:52.823 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.824 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.824 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.824 [main] DEBUG WordParser - Start word parsing
+17:54:52.824 [main] DEBUG WordParser - Finish word parsing
+17:54:52.824 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.824 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.824 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.824 [main] DEBUG WordParser - Start word parsing
+17:54:52.824 [main] DEBUG WordParser - Finish word parsing
+17:54:52.824 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.824 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.824 [main] DEBUG WordParser - Start word parsing
+17:54:52.824 [main] DEBUG WordParser - Finish word parsing
+17:54:52.824 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.824 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.824 [main] DEBUG WordParser - Start word parsing
+17:54:52.825 [main] DEBUG WordParser - Finish word parsing
+17:54:52.825 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.825 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.825 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.825 [main] DEBUG WordParser - Start word parsing
+17:54:52.825 [main] DEBUG WordParser - Finish word parsing
+17:54:52.825 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.825 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.825 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.825 [main] DEBUG WordParser - Start word parsing
+17:54:52.825 [main] DEBUG WordParser - Finish word parsing
+17:54:52.825 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.826 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.826 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.826 [main] DEBUG WordParser - Start word parsing
+17:54:52.826 [main] DEBUG WordParser - Finish word parsing
+17:54:52.826 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.826 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.826 [main] DEBUG WordParser - Start word parsing
+17:54:52.826 [main] DEBUG WordParser - Finish word parsing
+17:54:52.826 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.826 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.826 [main] DEBUG WordParser - Start word parsing
+17:54:52.826 [main] DEBUG WordParser - Finish word parsing
+17:54:52.826 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.827 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.827 [main] DEBUG WordParser - Start word parsing
+17:54:52.827 [main] DEBUG WordParser - Finish word parsing
+17:54:52.827 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.827 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.827 [main] DEBUG WordParser - Start word parsing
+17:54:52.827 [main] DEBUG WordParser - Finish word parsing
+17:54:52.827 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.827 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.827 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.827 [main] DEBUG WordParser - Start word parsing
+17:54:52.827 [main] DEBUG WordParser - Finish word parsing
+17:54:52.827 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.827 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.827 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.827 [main] DEBUG WordParser - Start word parsing
+17:54:52.827 [main] DEBUG WordParser - Finish word parsing
+17:54:52.828 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.828 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.828 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.828 [main] DEBUG WordParser - Start word parsing
+17:54:52.828 [main] DEBUG WordParser - Finish word parsing
+17:54:52.828 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.828 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.828 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.828 [main] DEBUG WordParser - Start word parsing
+17:54:52.828 [main] DEBUG WordParser - Finish word parsing
+17:54:52.828 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.828 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.828 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.828 [main] DEBUG WordParser - Start word parsing
+17:54:52.828 [main] DEBUG WordParser - Finish word parsing
+17:54:52.829 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.829 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.829 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.829 [main] DEBUG WordParser - Start word parsing
+17:54:52.829 [main] DEBUG WordParser - Finish word parsing
+17:54:52.829 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.829 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.829 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.829 [main] DEBUG WordParser - Start word parsing
+17:54:52.829 [main] DEBUG WordParser - Finish word parsing
+17:54:52.829 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.829 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.829 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.829 [main] DEBUG WordParser - Start word parsing
+17:54:52.829 [main] DEBUG WordParser - Finish word parsing
+17:54:52.829 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.829 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.829 [main] DEBUG WordParser - Start word parsing
+17:54:52.829 [main] DEBUG WordParser - Finish word parsing
+17:54:52.829 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.829 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.830 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.830 [main] DEBUG WordParser - Start word parsing
+17:54:52.830 [main] DEBUG WordParser - Finish word parsing
+17:54:52.830 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.830 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.830 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.830 [main] DEBUG WordParser - Start word parsing
+17:54:52.830 [main] DEBUG WordParser - Finish word parsing
+17:54:52.830 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.830 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.830 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.830 [main] DEBUG WordParser - Start word parsing
+17:54:52.830 [main] DEBUG WordParser - Finish word parsing
+17:54:52.830 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.831 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.831 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.831 [main] DEBUG WordParser - Start word parsing
+17:54:52.831 [main] DEBUG WordParser - Finish word parsing
+17:54:52.831 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.831 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.831 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.831 [main] DEBUG WordParser - Start word parsing
+17:54:52.831 [main] DEBUG WordParser - Finish word parsing
+17:54:52.831 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.831 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.831 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.831 [main] DEBUG WordParser - Start word parsing
+17:54:52.831 [main] DEBUG WordParser - Finish word parsing
+17:54:52.831 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.831 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.831 [main] DEBUG SentenceParser - Finish sentence parsing
+17:54:52.831 [main] DEBUG SentenceParser - Start sentence parsing
+17:54:52.831 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.831 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.831 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.832 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.832 [main] DEBUG WordParser - Start word parsing
+17:54:52.832 [main] DEBUG WordParser - Finish word parsing
+17:54:52.832 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.832 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.832 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.832 [main] DEBUG WordParser - Start word parsing
+17:54:52.832 [main] DEBUG WordParser - Finish word parsing
+17:54:52.832 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.832 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.832 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.832 [main] DEBUG WordParser - Start word parsing
+17:54:52.832 [main] DEBUG WordParser - Finish word parsing
+17:54:52.832 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.832 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.832 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.833 [main] DEBUG WordParser - Start word parsing
+17:54:52.833 [main] DEBUG WordParser - Finish word parsing
+17:54:52.833 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.833 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.833 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.833 [main] DEBUG WordParser - Start word parsing
+17:54:52.833 [main] DEBUG WordParser - Finish word parsing
+17:54:52.833 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.833 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.833 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.833 [main] DEBUG WordParser - Start word parsing
+17:54:52.833 [main] DEBUG WordParser - Finish word parsing
+17:54:52.833 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.833 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.833 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.833 [main] DEBUG WordParser - Start word parsing
+17:54:52.833 [main] DEBUG WordParser - Finish word parsing
+17:54:52.833 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.833 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.833 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.834 [main] DEBUG WordParser - Start word parsing
+17:54:52.834 [main] DEBUG WordParser - Finish word parsing
+17:54:52.834 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.834 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.834 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.834 [main] DEBUG WordParser - Start word parsing
+17:54:52.834 [main] DEBUG WordParser - Finish word parsing
+17:54:52.834 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.834 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.834 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.834 [main] DEBUG WordParser - Start word parsing
+17:54:52.834 [main] DEBUG WordParser - Finish word parsing
+17:54:52.834 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.834 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.834 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.834 [main] DEBUG WordParser - Start word parsing
+17:54:52.834 [main] DEBUG WordParser - Finish word parsing
+17:54:52.834 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.834 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.834 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.834 [main] DEBUG WordParser - Start word parsing
+17:54:52.834 [main] DEBUG WordParser - Finish word parsing
+17:54:52.834 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.834 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.835 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.835 [main] DEBUG WordParser - Start word parsing
+17:54:52.835 [main] DEBUG WordParser - Finish word parsing
+17:54:52.835 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.835 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.835 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.835 [main] DEBUG WordParser - Start word parsing
+17:54:52.835 [main] DEBUG WordParser - Finish word parsing
+17:54:52.835 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.835 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.835 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.835 [main] DEBUG WordParser - Start word parsing
+17:54:52.835 [main] DEBUG WordParser - Finish word parsing
+17:54:52.835 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.835 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.835 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.835 [main] DEBUG WordParser - Start word parsing
+17:54:52.835 [main] DEBUG WordParser - Finish word parsing
+17:54:52.835 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.835 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.835 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.835 [main] DEBUG WordParser - Start word parsing
+17:54:52.835 [main] DEBUG WordParser - Finish word parsing
+17:54:52.835 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.835 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.836 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.836 [main] DEBUG WordParser - Start word parsing
+17:54:52.836 [main] DEBUG WordParser - Finish word parsing
+17:54:52.836 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.836 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.836 [main] DEBUG SentenceParser - Finish sentence parsing
+17:54:52.836 [main] DEBUG SentenceParser - Start sentence parsing
+17:54:52.836 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.836 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.836 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.836 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.836 [main] DEBUG WordParser - Start word parsing
+17:54:52.836 [main] DEBUG WordParser - Finish word parsing
+17:54:52.836 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.836 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.836 [main] DEBUG LexemeParser - Start lexeme parsing
+17:54:52.836 [main] DEBUG WordParser - Start word parsing
+17:54:52.836 [main] DEBUG WordParser - Finish word parsing
+17:54:52.837 [main] WARN  LexemeParser - Unknown symbol
+17:54:52.837 [main] DEBUG LexemeParser - Finish lexeme parsing
+17:54:52.837 [main] DEBUG SentenceParser - Finish sentence parsing
+17:54:52.837 [main] DEBUG ParagraphParser - Finish paragraph parsing
+17:54:52.837 [main] DEBUG TextParser - Finish text parsing

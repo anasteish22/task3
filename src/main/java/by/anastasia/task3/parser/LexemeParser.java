@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 
 public class LexemeParser extends AbstractParserHandler {
     private static final Logger LOGGER = LogManager.getLogger();
+    private static final String WORD_REGEX = "[a-zA-Zа-яА-Я]+";
     private static final String LETTER_REGEX = "[a-zA-Zа-яА-Я]";
     private static final String PUNCTUATION_REGEX = "\\p{Punct}";
     private static final String NUMBER_REGEX = "\\d";
@@ -27,6 +28,9 @@ public class LexemeParser extends AbstractParserHandler {
 
         AbstractTextComponent lexeme = new TextComposite(TextType.LEXEME);
 
+        Pattern wordPattern = Pattern.compile(WORD_REGEX);
+        Matcher wordMatcher = wordPattern.matcher(text);
+
         for (int i = 0; i < text.length(); i++) {
             char ch = text.charAt(i);
             String strCh = String.valueOf(ch);
@@ -35,16 +39,27 @@ public class LexemeParser extends AbstractParserHandler {
 
             if (strCh.matches(NUMBER_REGEX)) {
                 symbol.setType(TextType.NUMBER);
+                composite.add(symbol);
             } else if (strCh.matches(PUNCTUATION_REGEX)) {
                 symbol.setType(TextType.PUNCTUATION);
-            } else if (strCh.matches(LETTER_REGEX)) {
-                symbol.setType(TextType.LETTER);
-            } else {
-                LOGGER.log(Level.WARN, "Unknown symbol");
-            }
-            composite.add(symbol);
-        }
+                composite.add(symbol);
+            } else if (wordMatcher.find()) {
+                String word = wordMatcher.group();
+                TextComposite wordComponent = new TextComposite(TextType.WORD);
+                composite.add(wordComponent);
+                getSuccessor().parse(word, wordComponent);
 
-        LOGGER.log(Level.DEBUG, "Finish lexeme parsing");
+                if (strCh.matches(NUMBER_REGEX)) {
+                    symbol.setType(TextType.NUMBER);
+                    composite.add(symbol);
+                } else if (strCh.matches(PUNCTUATION_REGEX)) {
+                    symbol.setType(TextType.PUNCTUATION);
+                    composite.add(symbol);
+                } else {
+                    LOGGER.log(Level.WARN, "Unknown symbol");
+                }
+                LOGGER.log(Level.DEBUG, "Finish lexeme parsing");
+            }
+        }
     }
 }
