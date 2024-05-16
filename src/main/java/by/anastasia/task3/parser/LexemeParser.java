@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
 public class LexemeParser extends AbstractParserHandler {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final String WORD_REGEX = "[a-zA-Zа-яА-Я]+";
-    private static final String LETTER_REGEX = "[a-zA-Zа-яА-Я]";
     private static final String PUNCTUATION_REGEX = "\\p{Punct}";
     private static final String NUMBER_REGEX = "\\d";
 
@@ -48,18 +47,10 @@ public class LexemeParser extends AbstractParserHandler {
                 TextComposite wordComponent = new TextComposite(TextType.WORD);
                 composite.add(wordComponent);
                 getSuccessor().parse(word, wordComponent);
-
-                if (strCh.matches(NUMBER_REGEX)) {
-                    symbol.setType(TextType.NUMBER);
-                    composite.add(symbol);
-                } else if (strCh.matches(PUNCTUATION_REGEX)) {
-                    symbol.setType(TextType.PUNCTUATION);
-                    composite.add(symbol);
-                } else {
-                    LOGGER.log(Level.WARN, "Unknown symbol");
-                }
-                LOGGER.log(Level.DEBUG, "Finish lexeme parsing");
+            } else {
+                LOGGER.log(Level.WARN, "Unknown symbol");
             }
+            LOGGER.log(Level.DEBUG, "Finish lexeme parsing");
         }
     }
 }
