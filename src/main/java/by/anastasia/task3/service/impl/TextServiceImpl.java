@@ -9,10 +9,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -20,6 +17,7 @@ public class TextServiceImpl implements TextService {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final String VOWEL_REGEX_ENG = "[aAeEiIoOuUyYа]";
     private static final String VOWEL_REGEX_RUS = "[АеЕёЁиИоОуУэЭыЫюЮ]";
+
     @Override
     public List<AbstractTextComponent> sortParagraphs(AbstractTextComponent composite, ParagraphComparator comparator) throws TextException {
         if (composite.getType() != TextType.TEXT) {
@@ -35,12 +33,62 @@ public class TextServiceImpl implements TextService {
 
     @Override
     public List<AbstractTextComponent> findSentenceWithLongestWord(AbstractTextComponent composite) throws TextException {
-        return null;
+        if (composite.getType() != TextType.TEXT) {
+            LOGGER.log(Level.ERROR, "Wrong text type: " + composite.getType() + ", but 'TEXT' was expected.");
+            throw new TextException("Wrong text type: " + composite.getType() + ", but 'TEXT' was expected.");
+        }
+        List<AbstractTextComponent> textComponents = composite.getComponents();
+        List<AbstractTextComponent> words = new ArrayList<>();
+
+        textComponents.stream()
+                .flatMap(paragraph -> paragraph.getComponents().stream())
+                .flatMap(sentence -> sentence.getComponents().stream())
+                .flatMap(lexeme -> lexeme.getComponents().stream())
+                .filter(word -> word.getType() == TextType.WORD)
+                .forEach(words::add);
+
+        AbstractTextComponent longestWord = words.getFirst();
+
+        for (AbstractTextComponent word : words) {
+            if (word.getComponents().size() > longestWord.getComponents().size()) {
+                longestWord = word;
+            }
+        }
+
+        List<AbstractTextComponent> sentences = new ArrayList<>();
+
+        AbstractTextComponent finalLongestWord = longestWord;
+        textComponents.stream()
+                .flatMap(paragraph -> paragraph.getComponents().stream())
+                .forEach(sentence -> {
+                    for (AbstractTextComponent lexeme : sentence.getComponents()) {
+                        for (AbstractTextComponent word : lexeme.getComponents()) {
+                            if (word.getType() == TextType.WORD && word == finalLongestWord) {
+                                sentences.add(sentence);
+                            }
+                        }
+                    }
+                });
+        return sentences;
     }
 
     @Override
-    public AbstractTextComponent removeSentences(AbstractTextComponent composite, int wordsAmount) throws TextException {
-        return null;
+    public List<AbstractTextComponent> removeSentences(AbstractTextComponent composite, int wordsAmount) throws TextException {
+        if (composite.getType() != TextType.TEXT) {
+            LOGGER.log(Level.ERROR, "Wrong text type: " + composite.getType() + ", but 'TEXT' was expected.");
+            throw new TextException("Wrong text type: " + composite.getType() + ", but 'TEXT' was expected.");
+        }
+        List<AbstractTextComponent> sentences = new ArrayList<>();
+
+        List<AbstractTextComponent> textComponents = composite.getComponents();
+        textComponents.stream()
+                .flatMap(paragraphs -> paragraphs.getComponents().stream())
+                .forEach(sentence -> {
+                    if (countWordsInSentence(sentence) >= wordsAmount) {
+                        sentences.add(sentence);
+                    }
+                });
+        return sentences;
     }
 
     @Override
@@ -104,5 +152,14 @@ public class TextServiceImpl implements TextService {
                 .filter(letter -> !Pattern.matches(VOWEL_REGEX_ENG, letter.toString()) && !Pattern.matches(VOWEL_REGEX_RUS, letter.toString()))
                 .count();
         return consonantsAmount;
+    }
+
+    private int countWordsInSentence(AbstractTextComponent composite) {
+        List<AbstractTextComponent> sentenceComponents = composite.getComponents();
+        int count = (int) sentenceComponents.stream()
+                .flatMap(lexeme -> lexeme.getComponents().stream())
+                .filter(element -> element.getType() == TextType.WORD)
+                .count();
+        return count;
     }
 }

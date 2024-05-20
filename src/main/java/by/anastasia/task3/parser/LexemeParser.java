@@ -31,11 +31,9 @@ public class LexemeParser extends AbstractParserHandler {
                 char ch = word.charAt(0);
                 SymbolLeaf symbol = new SymbolLeaf(TextType.PUNCTUATION, ch);
                 composite.add(symbol);
-                System.out.println(ch);
             } else {
                 AbstractTextComponent wordComponent = new TextComposite(TextType.WORD);
                 composite.add(wordComponent);
-                System.out.println(word);
                 getSuccessor().parse(word, wordComponent);
             }
         }

@@ -48,8 +48,14 @@ public class TextComposite extends AbstractTextComponent {
     @Override
     public String toString() {
         String text = "";
-        for (AbstractTextComponent component:components) {
-            text += component.toString();
+        for (AbstractTextComponent component : components) {
+            if (component.getType() == TextType.LEXEME) {
+                text += component + " ";
+            } else if (component.getType() == TextType.PARAGRAPH) {
+                text += component + "\n" + "\t";
+            } else {
+                text += component.toString();
+            }
         }
         return text;
     }

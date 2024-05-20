@@ -25,15 +25,12 @@ public class WordParser extends AbstractParserHandler {
             if (strCh.matches(NUMBER_REGEX)) {
                 SymbolLeaf symbol = new SymbolLeaf(TextType.NUMBER, ch);
                 composite.add(symbol);
-                System.out.println(strCh);
             } else if (strCh.matches(LETTER_REGEX)) {
                 SymbolLeaf symbol = new SymbolLeaf(TextType.LETTER, ch);
                 composite.add(symbol);
-                System.out.println(strCh);
             } else if (strCh.matches(PUNCTUATION_REGEX)) {
                 SymbolLeaf symbol = new SymbolLeaf(TextType.PUNCTUATION, ch);
                 composite.add(symbol);
-                System.out.println(strCh);
             } else {
                 LOGGER.log(Level.WARN, "Unknown symbol");
             }

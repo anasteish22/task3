@@ -36,5 +36,7 @@ public class Main {
         System.out.println(textService.countVowels(component1.getElement(0)));
         System.out.println(textService.countConsonants(component1.getElement(0)));
         System.out.println(textService.findAndCountIdenticalWords(component));
+        System.out.println(textService.removeSentences(component, 10));
+        System.out.println(textService.findSentenceWithLongestWord(component));
     }
 }
