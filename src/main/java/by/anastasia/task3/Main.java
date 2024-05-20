@@ -33,8 +33,8 @@ public class Main {
         ParagraphComparator comparator = new ParagraphComparator();
         TextServiceImpl textService = new TextServiceImpl();
         System.out.println(textService.sortParagraphs(component, comparator));
-        System.out.println(textService.findSentenceWithLongestWord(component));
         System.out.println(textService.countVowels(component1.getElement(0)));
         System.out.println(textService.countConsonants(component1.getElement(0)));
+        System.out.println(textService.findAndCountIdenticalWords(component));
     }
 }

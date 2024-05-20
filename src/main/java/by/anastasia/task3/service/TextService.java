@@ -5,6 +5,7 @@ import by.anastasia.task3.composite.AbstractTextComponent;
 import by.anastasia.task3.exception.TextException;
 
 import java.util.List;
+import java.util.Map;
 
 public interface TextService {
     List<AbstractTextComponent> sortParagraphs(AbstractTextComponent composite, ParagraphComparator comparator) throws TextException;
@@ -13,7 +14,7 @@ public interface TextService {
 
     AbstractTextComponent removeSentences(AbstractTextComponent composite, int wordsAmount) throws TextException;
 
-    int countIdenticalWords(AbstractTextComponent composite) throws TextException;
+    Map<String, Integer> findAndCountIdenticalWords(AbstractTextComponent composite) throws TextException;
 
     int countVowels(AbstractTextComponent composite) throws TextException;
 
