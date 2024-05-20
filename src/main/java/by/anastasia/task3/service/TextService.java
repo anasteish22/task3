@@ -11,7 +11,7 @@ public interface TextService {
 
     List<AbstractTextComponent> findSentenceWithLongestWord(AbstractTextComponent composite) throws TextException;
 
-    List<AbstractTextComponent> removeSentences(AbstractTextComponent composite, int wordsAmount) throws TextException;
+    AbstractTextComponent removeSentences(AbstractTextComponent composite, int wordsAmount) throws TextException;
 
     int countIdenticalWords(AbstractTextComponent composite) throws TextException;
 
